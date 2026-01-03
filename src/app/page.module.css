@@ -1,0 +1,103 @@
+.homepage {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--md-sys-color-primary-container) 0%,
+    var(--md-sys-color-surface-variant) 100%
+  );
+  padding: calc(var(--md-sys-spacing-unit) * 8) calc(var(--md-sys-spacing-unit) * 2);
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 calc(var(--md-sys-spacing-unit) * 2);
+}
+
+.brandName {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--md-sys-color-on-background);
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 2);
+}
+
+.heroSubtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 400;
+}
+
+.collectionsSection {
+  padding: calc(var(--md-sys-spacing-unit) * 8) 0;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  color: var(--md-sys-color-on-background);
+  text-align: center;
+}
+
+.collectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: calc(var(--md-sys-spacing-unit) * 4);
+}
+
+@media (max-width: 768px) {
+  .collectionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.collectionCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--md-sys-color-surface);
+  border-radius: calc(var(--md-sys-spacing-unit) * 2);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.collectionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+.collectionImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--md-sys-color-surface-variant);
+  overflow: hidden;
+}
+
+.collectionInfo {
+  padding: calc(var(--md-sys-spacing-unit) * 3);
+}
+
+.collectionTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: calc(var(--md-sys-spacing-unit));
+}
+
+.collectionDescription {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.5;
+}
+
