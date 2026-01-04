@@ -1,49 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Material Design 3 Color System */
+/* Pixieset-inspired Color System - Clean & Minimal */
 :root {
-  /* Primary colors */
-  --md-sys-color-primary: #6750A4;
-  --md-sys-color-on-primary: #FFFFFF;
-  --md-sys-color-primary-container: #EADDFF;
-  --md-sys-color-on-primary-container: #21005D;
-
-  /* Secondary colors */
-  --md-sys-color-secondary: #625B71;
-  --md-sys-color-on-secondary: #FFFFFF;
-  --md-sys-color-secondary-container: #E8DEF8;
-  --md-sys-color-on-secondary-container: #1D192B;
-
-  /* Tertiary colors */
-  --md-sys-color-tertiary: #7D5260;
-  --md-sys-color-on-tertiary: #FFFFFF;
-  --md-sys-color-tertiary-container: #FFD8E4;
-  --md-sys-color-on-tertiary-container: #31111D;
-
-  /* Error colors */
-  --md-sys-color-error: #BA1A1A;
-  --md-sys-color-on-error: #FFFFFF;
-  --md-sys-color-error-container: #FFDAD6;
-  --md-sys-color-on-error-container: #410002;
-
+  /* Neutral colors - Pixieset uses mostly black/white/gray */
+  --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #E5E5E5;
+  --color-gray-300: #CCCCCC;
+  --color-gray-600: #666666;
+  --color-gray-800: #333333;
+  
   /* Background colors */
-  --md-sys-color-background: #FFFBFE;
-  --md-sys-color-on-background: #1C1B1F;
-  --md-sys-color-surface: #FFFBFE;
-  --md-sys-color-on-surface: #1C1B1F;
-  --md-sys-color-surface-variant: #E7E0EC;
-  --md-sys-color-on-surface-variant: #49454F;
+  --md-sys-color-background: var(--color-white);
+  --md-sys-color-on-background: var(--color-black);
+  --md-sys-color-surface: var(--color-white);
+  --md-sys-color-on-surface: var(--color-black);
+  --md-sys-color-surface-variant: var(--color-gray-100);
+  --md-sys-color-on-surface-variant: var(--color-gray-600);
 
+  /* Links and accents */
+  --md-sys-color-primary: var(--color-black);
+  --md-sys-color-on-primary: var(--color-white);
+  
   /* Outline */
-  --md-sys-color-outline: #79747E;
-  --md-sys-color-outline-variant: #CAC4D0;
+  --md-sys-color-outline: var(--color-gray-300);
+  --md-sys-color-outline-variant: var(--color-gray-200);
 
-  /* Shadow */
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-scrim: #000000;
-
-  /* Surface tints */
-  --md-sys-color-surface-tint: #6750A4;
+  /* Shadow - very subtle */
+  --md-sys-color-shadow: rgba(0, 0, 0, 0.1);
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.95);
 
   /* Spacing */
   --md-sys-spacing-unit: 8px;
@@ -61,11 +48,13 @@ body {
   overflow-x: hidden;
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
 }
 
 a {
@@ -81,14 +70,14 @@ img {
 
 /* Utility classes */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 calc(var(--md-sys-spacing-unit) * 2);
+  padding: 0 calc(var(--md-sys-spacing-unit) * 4);
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--md-sys-spacing-unit);
+    padding: 0 calc(var(--md-sys-spacing-unit) * 2);
   }
 }
 

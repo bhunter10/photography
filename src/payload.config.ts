@@ -29,6 +29,8 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI,
     },
+    // Note: PostgreSQL 18 may have compatibility issues with Payload 3.9.0
+    // If errors persist, consider downgrading to PostgreSQL 17
   }),
 })
 

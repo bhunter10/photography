@@ -1,26 +1,29 @@
 .galleryPage {
   min-height: 100vh;
-  padding: calc(var(--md-sys-spacing-unit) * 4) 0;
+  padding: calc(var(--md-sys-spacing-unit) * 8) 0;
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
   gap: calc(var(--md-sys-spacing-unit));
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 4);
-  font-size: 0.875rem;
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  font-size: 0.75rem;
   color: var(--md-sys-color-on-surface-variant);
   flex-wrap: wrap;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 
 .breadcrumb a {
-  color: var(--md-sys-color-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: var(--md-sys-color-on-surface-variant);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .breadcrumb a:hover {
-  text-decoration-thickness: 2px;
+  color: var(--md-sys-color-on-background);
 }
 
 .breadcrumbSeparator {
@@ -28,34 +31,44 @@
 }
 
 .galleryHeader {
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 10);
   text-align: center;
+  padding-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .galleryTitle {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 400;
   margin-bottom: calc(var(--md-sys-spacing-unit) * 2);
   color: var(--md-sys-color-on-background);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .galleryDate {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--md-sys-color-on-surface-variant);
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 2);
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 3);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .galleryDescription {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: var(--md-sys-color-on-surface-variant);
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 .emptyState {
   text-align: center;
-  padding: calc(var(--md-sys-spacing-unit) * 8);
+  padding: calc(var(--md-sys-spacing-unit) * 12);
   color: var(--md-sys-color-on-surface-variant);
+  font-weight: 300;
 }
 

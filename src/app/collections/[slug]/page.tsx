@@ -2,11 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
-import config from '@/payload.config'
+import configPromise from '@/payload.config'
 import styles from './page.module.css'
 
 async function getCollection(slug: string) {
-  const payload = await getPayload({ config })
+  const payload = await getPayload({ config: configPromise })
   const collections = await payload.find({
     collection: 'collections',
     where: {
@@ -25,7 +25,7 @@ async function getCollection(slug: string) {
 }
 
 async function getGalleries(collectionId: string) {
-  const payload = await getPayload({ config })
+  const payload = await getPayload({ config: configPromise })
   const galleries = await payload.find({
     collection: 'galleries',
     where: {

@@ -9,20 +9,21 @@
     "start": "next start",
     "payload": "payload",
     "generate:types": "payload generate:types",
-    "generate:importmap": "payload generate:importmap"
+    "generate:importmap": "payload generate:importmap",
+    "seed": "tsx scripts/seed.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
-    "@payloadcms/db-postgres": "3.67.0",
-    "@payloadcms/next": "3.67.0",
-    "@payloadcms/plugin-cloud-storage": "3.67.0",
-    "@payloadcms/richtext-slate": "3.67.0",
+    "@payloadcms/db-postgres": "^3.69.0",
+    "@payloadcms/next": "^3.69.0",
+    "@payloadcms/plugin-cloud-storage": "^3.69.0",
+    "@payloadcms/richtext-slate": "^3.69.0",
     "dotenv": "^16.3.1",
     "graphql": "^16.8.1",
     "next": "^15.4.10",
-    "payload": "3.67.0",
+    "payload": "^3.69.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.2"
@@ -33,6 +34,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "15.4.10",
+    "tsx": "^4.21.0",
     "typescript": "^5.3.3"
   }
 }

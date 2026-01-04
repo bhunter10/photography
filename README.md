@@ -103,12 +103,30 @@ npm run dev
 
 The site will be available at:
 - **Frontend**: http://localhost:3000
-- **Admin Panel**: http://localhost:3000/admin
+- **Admin Panel**: http://localhost:3000/admin (⚠️ currently affected by Payload 3.x bug)
 
-### 6. Create Admin User
+### 6. Admin Access
 
-1. Navigate to http://localhost:3000/admin
-2. Click "Create First User"
+⚠️ **Known Issue:** The Payload 3.x admin UI currently has a bug with Next.js 15.
+
+**Recommended Workarounds:**
+1. **Use the API Helper Script** (easiest):
+   ```bash
+   ./scripts/api-helper.sh
+   ```
+
+2. **Use REST API directly** - see `QUICK_START_API.md` for step-by-step guide
+
+3. **Use Postman/Insomnia** for visual API management
+
+4. **Wait for official fix** - monitor Payload GitHub for updates
+
+**Note:** The backend is 100% functional via API. Only the browser admin UI is affected.
+
+**📚 Documentation:**
+- `QUICK_START_API.md` - Step-by-step guide to managing content via API
+- `ADMIN_FIX_OPTIONS.md` - Complete guide to all available workarounds
+- `ADMIN_UI_STATUS.md` - Bug details and tested versions
 3. Enter your email and password
 4. Log in to the admin panel
 

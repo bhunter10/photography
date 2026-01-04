@@ -1,14 +1,21 @@
 .photoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: calc(var(--md-sys-spacing-unit) * 2);
-  margin-top: calc(var(--md-sys-spacing-unit) * 4);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: calc(var(--md-sys-spacing-unit) * 3);
+  margin-top: calc(var(--md-sys-spacing-unit) * 6);
+}
+
+@media (max-width: 1024px) {
+  .photoGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: calc(var(--md-sys-spacing-unit) * 2);
+  }
 }
 
 @media (max-width: 768px) {
   .photoGrid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: calc(var(--md-sys-spacing-unit));
+    gap: calc(var(--md-sys-spacing-unit) * 1.5);
   }
 }
 
@@ -20,17 +27,15 @@
   cursor: pointer;
   aspect-ratio: 1;
   overflow: hidden;
-  border-radius: calc(var(--md-sys-spacing-unit));
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
 .photoItem:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .photoItem:focus {
-  outline: 2px solid var(--md-sys-color-primary);
+  outline: 2px solid var(--md-sys-color-on-background);
   outline-offset: 2px;
 }
 

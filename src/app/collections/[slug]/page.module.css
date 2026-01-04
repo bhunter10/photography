@@ -1,25 +1,28 @@
 .collectionPage {
   min-height: 100vh;
-  padding: calc(var(--md-sys-spacing-unit) * 4) 0;
+  padding: calc(var(--md-sys-spacing-unit) * 8) 0;
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
   gap: calc(var(--md-sys-spacing-unit));
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 4);
-  font-size: 0.875rem;
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  font-size: 0.75rem;
   color: var(--md-sys-color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 
 .breadcrumb a {
-  color: var(--md-sys-color-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: var(--md-sys-color-on-surface-variant);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .breadcrumb a:hover {
-  text-decoration-thickness: 2px;
+  color: var(--md-sys-color-on-background);
 }
 
 .breadcrumbSeparator {
@@ -27,51 +30,62 @@
 }
 
 .collectionHeader {
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 10);
   text-align: center;
+  padding-bottom: calc(var(--md-sys-spacing-unit) * 6);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
 .collectionTitle {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 400;
-  margin-bottom: calc(var(--md-sys-spacing-unit) * 2);
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 3);
   color: var(--md-sys-color-on-background);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .collectionDescription {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: var(--md-sys-color-on-surface-variant);
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 .galleriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: calc(var(--md-sys-spacing-unit) * 4);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: calc(var(--md-sys-spacing-unit) * 6);
+  padding: 0;
 }
 
 @media (max-width: 768px) {
   .galleriesGrid {
     grid-template-columns: 1fr;
+    gap: calc(var(--md-sys-spacing-unit) * 4);
   }
 }
 
 .galleryCard {
   display: flex;
   flex-direction: column;
-  background: var(--md-sys-color-surface);
-  border-radius: calc(var(--md-sys-spacing-unit) * 2);
+  background: transparent;
+  border: none;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .galleryCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+  opacity: 0.85;
+}
+
+.galleryCard:hover .galleryTitle {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .galleryImage {
@@ -80,27 +94,35 @@
   aspect-ratio: 4 / 3;
   background: var(--md-sys-color-surface-variant);
   overflow: hidden;
+  margin-bottom: calc(var(--md-sys-spacing-unit) * 3);
 }
 
 .galleryInfo {
-  padding: calc(var(--md-sys-spacing-unit) * 3);
+  padding: 0;
+  text-align: center;
 }
 
 .galleryTitle {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 400;
   color: var(--md-sys-color-on-surface);
   margin-bottom: calc(var(--md-sys-spacing-unit));
+  letter-spacing: -0.01em;
+  transition: text-decoration 0.2s ease;
 }
 
 .galleryDate {
   font-size: 0.875rem;
   color: var(--md-sys-color-on-surface-variant);
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 .emptyState {
   text-align: center;
-  padding: calc(var(--md-sys-spacing-unit) * 8);
+  padding: calc(var(--md-sys-spacing-unit) * 12);
   color: var(--md-sys-color-on-surface-variant);
+  font-weight: 300;
 }
 
